@@ -8,6 +8,7 @@
  */
 
 #include "LR_SCP.h"
+#include <algorithm>
 
 bool compare_row_id_size_pair(pair<int,int> a, pair<int,int> b)
 {
