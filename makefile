@@ -1,7 +1,7 @@
-all: LRTag.exe
+all: LRTag
 
-LRTag.exe: main.o  sgl_ppl_loci_correlation.o SCP.o thread_control_office.o MDS_solver.o LR_SCP.o reaper_emulator.o LD_select_emulator.o multi_pop_select.o
-	g++ -o LRTag.exe -lpthread main.o  sgl_ppl_loci_correlation.o SCP.o thread_control_office.o MDS_solver.o LR_SCP.o reaper_emulator.o LD_select_emulator.o multi_pop_select.o
+LRTag: main.o  sgl_ppl_loci_correlation.o SCP.o thread_control_office.o MDS_solver.o LR_SCP.o reaper_emulator.o LD_select_emulator.o multi_pop_select.o
+	g++ -o LRTag -pthread main.o  sgl_ppl_loci_correlation.o SCP.o thread_control_office.o MDS_solver.o LR_SCP.o reaper_emulator.o LD_select_emulator.o multi_pop_select.o
 
 main.o : main.cpp
 	g++ -o main.o -c -g main.cpp
@@ -24,4 +24,4 @@ multi_pop_select.o : multi_pop_select.cpp multi_pop_select.h constants.h
 
 
 clean: 
-	rm -rf *.o; rm -rf *.exe; rm -rf *~; rm -rf *.out
+	rm -rf *.o; rm -rf LRTag; rm -rf *~; rm -rf *.out
