@@ -3,7 +3,7 @@ LRTag is a tool that is capable of efficiently selecting a near optimal set of S
 
 Software requirement
 
-    g++
+* g++
 
 To download: type "git clone https://github.com/ucrbioinfo/LRTag"
 
